@@ -12,9 +12,13 @@ class Food extends Product {
     $this->discount = $discount;
   }
 
+  public function getPrezzoFinale($a, $b){
+    $total = ($a - ($a * ($b / 100)));
+    return $total;
+  }
 
   public function getProductInfo() {
-    return  parent::getProductInfo() . "<br> prezzo scontato: " . ($this->price - $this->discount ) . " euro";
+    return  parent::getProductInfo() . "<br> prezzo scontato: " . $this->getPrezzoFinale($this->price , $this->discount ) . " euro";
   }
 
 }

@@ -17,7 +17,7 @@ require_once __DIR__ . "/elettronic.php";
   <body>
 
     <h1>Prodotto alimentare</h1>
-    <?php $carne = new Food('carne', 5, '12/02/2021', 2) ?>
+    <?php $carne = new Food('carne', 5, '12/02/2021', 50) ?>
 
     <p>
       <?php echo $carne->getProductInfo() ?>
